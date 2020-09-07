@@ -12,7 +12,10 @@
     "next-tinacms-github": "^0.29.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
+    "react-parallax": "^3.0.3",
+    "react-tinacms-editor": "^0.29.0",
     "react-tinacms-github": "^0.29.0",
+    "react-tinacms-inline": "^0.29.0",
     "styled-components": "^5.2.0",
     "tinacms": "^0.29.0"
   },

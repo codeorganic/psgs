@@ -1,6 +1,6 @@
 import App from 'next/app'
 import { TinaCMS, TinaProvider } from 'tinacms'
-import { GithubClient, TinacmsGithubProvider } from 'react-tinacms-github'
+import { GithubClient, TinacmsGithubProvider } from 'react-tinacms-github';
 
 export default class Site extends App {
   cms: TinaCMS
@@ -28,7 +28,8 @@ export default class Site extends App {
        */
       sidebar: props.pageProps.preview,
       toolbar: props.pageProps.preview,
-    })
+    });
+
   }
 
   render() {
@@ -46,8 +47,10 @@ export default class Site extends App {
           {/**
            * 5. Add a button for entering Preview/Edit Mode
            */}
-          <EditLink cms={this.cms} />
+          {/* <EditLink cms={this.cms} /> */}
           <Component {...pageProps} />
+
+          <EditLink cms={this.cms} />
         </TinacmsGithubProvider>
       </TinaProvider>
     )
