@@ -5,6 +5,7 @@ import { useGithubJsonForm, useGithubToolbarPlugins } from 'react-tinacms-github
 import { InlineForm, InlineTextField, InlineTextarea, InlineText } from 'react-tinacms-inline';
 import { Parallax, Background } from 'react-parallax';
 import { InlineWysiwyg } from 'react-tinacms-editor'
+import ReactMarkdown from 'react-markdown'
 
 import { getGithubPreviewProps, parseJson } from 'next-tinacms-github';
 import { GetStaticProps } from 'next';
@@ -12,7 +13,10 @@ import { GetStaticProps } from 'next';
 export default function Home({ file }) {
    const formOptions = {
        label: 'Home Page',
-        fields: [{ name: 'title', component: 'text' }],
+       fields: [
+         { name: 'title', component: 'text' },
+         { name: 'body', component: 'html' }
+       ],
   };
   const cms = useCMS();
   const [data, form] = useGithubJsonForm(file, formOptions);
@@ -88,8 +92,8 @@ export default function Home({ file }) {
           </h3>
             <div className="d-flex justify-content-center">
               <p className="lead w-75 text-center align-self-center">
-                <InlineWysiwyg name="body" format="html" >
-                  {data.body}
+                <InlineWysiwyg name="body" format="markdown" sticky focusRing>
+                  <ReactMarkdown source={data.body} />
                 </InlineWysiwyg>
               </p>
           </div>
