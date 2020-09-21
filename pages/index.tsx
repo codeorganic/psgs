@@ -13,9 +13,17 @@ import { GetStaticProps } from 'next';
 import { InlineWysiwyg } from 'react-tinacms-editor'
 
 export default function Home({ file }) {
-  // const cms = useCMS();
-  const [data, form] = useGithubMarkdownForm(file);
-  usePlugins([form, HtmlFieldPlugin, MarkdownFieldPlugin]);
+  const formOptions = {
+    label: 'Blog Post',
+    fields: [
+      {
+        name: 'body',
+        component: 'html',
+      },
+    ],
+  };
+  const [data, form] = useGithubJsonForm(file);
+  usePlugins([form]);
 
   useGithubToolbarPlugins();
 
@@ -86,7 +94,7 @@ export default function Home({ file }) {
             <div className="d-flex justify-content-center">
               <p className="lead w-75 text-center align-self-center">
                 <InlineWysiwyg name="body" format="markdown" sticky="false">
-                  <ReactMarkdown source={data.body} />
+                  {/* <ReactMarkdown source={data.body} /> */}
                 </InlineWysiwyg>
               </p>
           </div>
