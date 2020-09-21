@@ -1,7 +1,7 @@
 import Head from 'next/head';
 
 import { usePlugin, useCMS, usePlugins } from 'tinacms';
-import { useGithubJsonForm, useGithubToolbarPlugins } from 'react-tinacms-github';
+import { useGithubJsonForm, useGithubToolbarPlugins, useGithubMarkdownForm } from 'react-tinacms-github';
 import { InlineForm, InlineTextField, InlineTextarea, InlineText } from 'react-tinacms-inline';
 import { HtmlFieldPlugin, MarkdownFieldPlugin } from 'react-tinacms-editor'
 import { Parallax, Background } from 'react-parallax';
@@ -14,8 +14,8 @@ import { InlineWysiwyg } from 'react-tinacms-editor'
 
 export default function Home({ file }) {
   // const cms = useCMS();
-  const [data, form] = useGithubJsonForm(file);
-  usePlugins([form]);
+  const [data, form] = useGithubMarkdownForm(file);
+  usePlugins([form, HtmlFieldPlugin, MarkdownFieldPlugin]);
 
   useGithubToolbarPlugins();
 
@@ -85,7 +85,7 @@ export default function Home({ file }) {
         <div className="text-center mt-5">
             <div className="d-flex justify-content-center">
               <p className="lead w-75 text-center align-self-center">
-                <InlineWysiwyg name="body" format="html" sticky="false">
+                <InlineWysiwyg name="body" format="markdown" sticky="false">
                   <ReactMarkdown source={data.body} />
                 </InlineWysiwyg>
               </p>
