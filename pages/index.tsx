@@ -85,7 +85,7 @@ export default function Home({ file }) {
         <div className="text-center mt-5">
             <div className="d-flex justify-content-center">
               <p className="lead w-75 text-center align-self-center">
-                <InlineWysiwyg name="body" format="markdown">
+                <InlineWysiwyg name="body" format="html" sticky="false">
                   <ReactMarkdown source={data.body} />
                 </InlineWysiwyg>
               </p>
