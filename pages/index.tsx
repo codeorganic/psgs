@@ -2,7 +2,7 @@ import Head from 'next/head';
 
 import { usePlugin, useCMS, usePlugins } from 'tinacms';
 import { useGithubJsonForm, useGithubToolbarPlugins, useGithubMarkdownForm } from 'react-tinacms-github';
-import { InlineForm, InlineTextField, InlineTextarea, InlineText } from 'react-tinacms-inline';
+import { InlineForm, InlineTextField, InlineTextarea, InlineText, InlineImage } from 'react-tinacms-inline';
 import { HtmlFieldPlugin, MarkdownFieldPlugin } from 'react-tinacms-editor'
 import { Parallax, Background } from 'react-parallax';
 import ReactMarkdown from 'react-markdown'
@@ -22,8 +22,8 @@ export default function Home({ file }) {
       },
     ],
   };
-  const [data, form] = useGithubJsonForm(file);
-  usePlugins([form]);
+  const [data, form] = useGithubJsonForm(file, formOptions);
+  usePlugins([form, MarkdownFieldPlugin, HtmlFieldPlugin]);
 
   useGithubToolbarPlugins();
 
@@ -41,7 +41,7 @@ export default function Home({ file }) {
       </Head>
 
       <html style={{
-        fontFamily: "'Cabin', sans-serif"
+        fontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"'
       }}>
 
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -59,44 +59,43 @@ export default function Home({ file }) {
             <li className="nav-item">
               <a className="nav-link" href="#">Events</a>
             </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">By Laws</a>
+            </li>
           </ul>
         </div>
       </nav>
 
       <div className="h-25 border-white mr-4 ml-4">
         <Parallax
-              blur={2}
-              bgImage="https://images.unsplash.com/photo-1566122454526-251a106f7756?auto=format&q=80"
+              blur={4}
+              bgImage="/images/second.png"
               strength={400}
           >
-              <div style={{ height: '500px' }} className="d-flex justify-content-center">
+              <div style={{ height: '250px' }} className="d-flex justify-content-center">
                 <div className="align-self-center">
-                  <div className="card text-center border rounded" style={{
-                    background: 'rgba(255,255,255,.7)',
-                    minWidth: '350px',
-                    minHeight: '200px',
-                  }}>
-                    <div className="card-body align-items-center">
-                      <h5 className="card-title">
-                        <InlineText name="title" />
-                      </h5>
-                      <div>
-                        <hr className="w-25 border border-4 border-dark" />
-                      </div>
-                      <InlineText name="byline" />
-                    </div>
-                  </div>
+                    <h3 className="display-4 mb-4 text-center">
+                      About
+                    </h3>
                 </div>
               </div>
         </Parallax>
 
-        <div className="text-center mt-5">
+        <div className="mt-5">
             <div className="d-flex justify-content-center">
-              <p className="lead w-75 text-center align-self-center">
-                <InlineWysiwyg name="body" format="markdown" sticky="false">
-                  {/* <ReactMarkdown source={data.body} /> */}
+              <div className="lead w-75 align-self-center">
+                <InlineWysiwyg 
+                    name="body" 
+                    format="markdown" 
+                    imageProps={{
+                      parse: (filename) => `images/about/${filename}`,
+                      directory: 'public/images/about/',
+                    }}
+                    sticky
+                >
+                  <ReactMarkdown source={data.body} />
                 </InlineWysiwyg>
-              </p>
+              </div>
           </div>
         </div>
 
