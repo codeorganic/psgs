@@ -1,6 +1,7 @@
 import App from 'next/app'
 import { TinaCMS, TinaProvider } from 'tinacms'
 import { GithubClient, TinacmsGithubProvider } from 'react-tinacms-github';
+import '../styles/globals.css';
 
 export default class Site extends App {
   cms: TinaCMS
@@ -23,10 +24,10 @@ export default class Site extends App {
           baseRepoFullName: process.env.REPO_FULL_NAME, // e.g: tinacms/tinacms.org,
         }),
       },
-      /**
-       * 3. Use the Sidebar and Toolbar
-       */
-      sidebar: props.pageProps.preview,
+      // /**
+      //  * 3. Use the Sidebar and Toolbar
+      //  */
+      // sidebar: props.pageProps.preview,
       toolbar: props.pageProps.preview,
     });
 

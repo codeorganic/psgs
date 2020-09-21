@@ -1,33 +1,29 @@
 import Head from 'next/head';
 
-import { usePlugin, useCMS } from 'tinacms';
+import { usePlugin, useCMS, usePlugins } from 'tinacms';
 import { useGithubJsonForm, useGithubToolbarPlugins } from 'react-tinacms-github';
 import { InlineForm, InlineTextField, InlineTextarea, InlineText } from 'react-tinacms-inline';
+import { HtmlFieldPlugin, MarkdownFieldPlugin } from 'react-tinacms-editor'
 import { Parallax, Background } from 'react-parallax';
-import { InlineWysiwyg } from 'react-tinacms-editor'
 import ReactMarkdown from 'react-markdown'
 
 import { getGithubPreviewProps, parseJson } from 'next-tinacms-github';
 import { GetStaticProps } from 'next';
 
+import { InlineWysiwyg } from 'react-tinacms-editor'
+
 export default function Home({ file }) {
-   const formOptions = {
-       label: 'Home Page',
-       fields: [
-         { name: 'title', component: 'text' },
-         { name: 'body', component: 'html' }
-       ],
-  };
-  const cms = useCMS();
-  const [data, form] = useGithubJsonForm(file, formOptions);
-  usePlugin(form);
+  // const cms = useCMS();
+  const [data, form] = useGithubJsonForm(file);
+  usePlugins([form]);
+
   useGithubToolbarPlugins();
 
   return (
 
     <InlineForm form={form}>
       <Head>
-          <title>Create Next App</title>
+          <title>PSGS</title>
           <link rel="icon" href="/favicon.ico" />
           <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossOrigin="anonymous" />
           <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossOrigin="anonymous" />
@@ -87,12 +83,9 @@ export default function Home({ file }) {
         </Parallax>
 
         <div className="text-center mt-5">
-          <h3>
-            <InlineText name="bodyHeadline" />
-          </h3>
             <div className="d-flex justify-content-center">
               <p className="lead w-75 text-center align-self-center">
-                <InlineWysiwyg name="body" format="markdown" sticky focusRing>
+                <InlineWysiwyg name="body" format="markdown">
                   <ReactMarkdown source={data.body} />
                 </InlineWysiwyg>
               </p>
