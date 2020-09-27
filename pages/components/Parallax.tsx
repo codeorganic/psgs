@@ -9,7 +9,7 @@ type Props = {
 export default function ParallaxWrapper({
     pageName,
     bgImage = '/images/second.png',
-    height = '250px',
+    height = '350px',
 } : Props) {
     return (
         <div className="h-25 border-white">
@@ -20,7 +20,7 @@ export default function ParallaxWrapper({
             >
                 <div style={{ height }} className="d-flex justify-content-center">
                     <div className="align-self-center">
-                        <h3 className="display-4 mb-4 text-center">
+                        <h3 className="display-1 mb-4 text-center text-white">
                             {pageName}
                         </h3>
                     </div>

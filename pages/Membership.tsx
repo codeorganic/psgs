@@ -12,7 +12,7 @@ import SetupContent from './helpers/content';
 
 export default function Home({ file }) {
   const pageName = 'Membership';
-  const bgImage = '/images/second.png';
+  const bgImage = '/images/forth.jpg';
 
   const {form, data} = Setup(file);
 
