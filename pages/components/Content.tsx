@@ -23,7 +23,10 @@ export default function Content({
                         }}
                         sticky
                     >
-                        <ReactMarkdown source={data.body} />
+                        <ReactMarkdown 
+                            source={data.body} 
+                            escapeHtml={false} 
+                        />
                     </InlineWysiwyg>
                 </div>
             </div>
