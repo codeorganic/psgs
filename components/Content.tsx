@@ -13,7 +13,7 @@ export default function Content({
     return (
         <div className="mt-5">
             <div className="d-flex justify-content-center">
-                <div className="lead w-75 align-self-center">
+                <div className="lead w-75 align-self-center" style={{'minHeight': '400px'}}>
                     <InlineWysiwyg 
                         name="body"
                         format="markdown" 

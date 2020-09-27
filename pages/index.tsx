@@ -7,14 +7,18 @@ import NavBar from '../components/NavBar';
 import ParallaxWrapper from '../components/Parallax';
 import Content from '../components/Content';
 import { GetStaticProps } from 'next';
-import preview from './api/preview';
 import SetupContent from '../helpers/content';
+import Footer from '../components/Footer';
+import { useCMS } from 'tinacms';
+import { EditLink } from './_app';
 
 export default function Home({ file }) {
   const pageName = 'About';
   const bgImage = '/images/forth.jpg';
 
   const {form, data} = Setup(file);
+
+  const cms = useCMS();
 
   return (
     <html>
@@ -27,6 +31,12 @@ export default function Home({ file }) {
         <InlineForm form={form}>
             <Content data={data} />
         </InlineForm>
+
+        <div className="text-center">
+          <EditLink cms={cms} />
+        </div>
+
+        <Footer />
     </html>
   )
 }

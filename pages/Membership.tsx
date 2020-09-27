@@ -1,20 +1,24 @@
 
 import { InlineForm } from 'react-tinacms-inline';
 
-import Setup from '../helpers/setup';
+import Setup from '../helpers/setup'
 import Header from '../components/Head';
 import NavBar from '../components/NavBar';
 import ParallaxWrapper from '../components/Parallax';
 import Content from '../components/Content';
 import { GetStaticProps } from 'next';
-import preview from './api/preview';
-import SetupContent from '../helpers/content';
+import SetupContent from '../helpers/content'
+import Footer from '../components/Footer';
+import { EditLink } from './_app';
+import { useCMS } from 'tinacms';
 
 export default function Home({ file }) {
   const pageName = 'Membership';
   const bgImage = '/images/forth.jpg';
 
   const {form, data} = Setup(file);
+
+  const cms = useCMS();
 
   return (
     <html>
@@ -27,6 +31,12 @@ export default function Home({ file }) {
         <InlineForm form={form}>
             <Content data={data} />
         </InlineForm>
+
+        <div className="text-center">
+          <EditLink cms={cms} />
+        </div>
+
+        <Footer />
     </html>
   )
 }

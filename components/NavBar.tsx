@@ -15,6 +15,10 @@ const navItems = [
         link: '/Membership',
     },
     {
+        name: 'Gallery',
+        link: '/Gallery',
+    },
+    {
         name: 'Events',
         link: '/Events'
     },

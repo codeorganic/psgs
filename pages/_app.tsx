@@ -29,7 +29,6 @@ export default class Site extends App {
       // sidebar: props.pageProps.preview,
       toolbar: props.pageProps.preview,
     });
-
   }
 
   render() {
@@ -50,7 +49,7 @@ export default class Site extends App {
           {/* <EditLink cms={this.cms} /> */}
           <Component {...pageProps} />
 
-          <EditLink cms={this.cms} />
+          {/* <EditLink cms={this.cms} /> */}
         </TinacmsGithubProvider>
       </TinaProvider>
     )
@@ -84,8 +83,8 @@ export interface EditLinkProps {
 
 export const EditLink = ({ cms }: EditLinkProps) => {
   return (
-    <button onClick={() => cms.toggle()}>
-      {cms.enabled ? 'Exit Edit Mode' : 'Edit This Site'}
+    <button className="btn btn-secondary" onClick={() => cms.toggle()}>
+      {cms.enabled ? 'Exit Edit Mode' : 'Edit This Page'}
     </button>
   )
 }
