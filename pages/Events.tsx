@@ -1,13 +1,14 @@
 
 import { InlineForm } from 'react-tinacms-inline';
 
-import Setup from './helpers/setup';
+import Setup from '../helpers/setup';
 import Header from '../components/Head';
 import NavBar from '../components/NavBar';
 import ParallaxWrapper from '../components/Parallax';
 import Content from '../components/Content';
 import { GetStaticProps } from 'next';
-import SetupContent from './helpers/content';
+import preview from './api/preview';
+import SetupContent from '../helpers/content';
 
 export default function Home({ file }) {
   const pageName = 'Events';
