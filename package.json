@@ -8,8 +8,13 @@
     "start": "next start"
   },
   "dependencies": {
+    "hygen-next-tinacms-github": "https://github.com/dwalkr/hygen-next-tinacms-github",
+    "jimp": "^0.16.1",
+    "make-arrow-function": "^1.2.0",
+    "make-generator-function": "^2.0.0",
     "next": "9.5.3",
     "next-tinacms-github": "^0.29.0",
+    "probe-image-size": "^5.0.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-markdown": "^4.3.1",
@@ -18,12 +23,12 @@
     "react-tinacms-github": "^0.29.0",
     "react-tinacms-inline": "^0.29.0",
     "styled-components": "^5.2.0",
+    "tape": "^5.0.1",
     "tinacms": "^0.29.0"
   },
   "devDependencies": {
     "@types/node": "^14.6.4",
     "@types/react": "^16.9.49",
-    "hygen-next-tinacms-github": "https://github.com/dwalkr/hygen-next-tinacms-github",
     "typescript": "^4.0.2"
   }
 }
