@@ -16,7 +16,7 @@ export default async function SetupContent(jsonFile, preview, previewData) {
                 preview: false,
                 file: {
                     fileRelativePath: jsonFile,
-                    data: (await import(`../${jsonFile}`)).default,
+                    data: (await import(`../../${jsonFile}`)).default,
                 },
             },
         }

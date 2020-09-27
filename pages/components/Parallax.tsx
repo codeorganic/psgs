@@ -12,7 +12,7 @@ export default function ParallaxWrapper({
     height = '250px',
 } : Props) {
     return (
-        <div className="h-25 border-white mr-4 ml-4">
+        <div className="h-25 border-white">
             <Parallax
                 blur={4}
                 bgImage={bgImage}

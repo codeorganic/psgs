@@ -1,7 +1,7 @@
 import { useGithubToolbarPlugins, useGithubJsonForm } from "react-tinacms-github";
-import { usePlugins } from "tinacms/build/react-tinacms";
 import { MarkdownFieldPlugin, HtmlFieldPlugin } from "react-tinacms-editor";
 import { GitFile } from "react-tinacms-github/dist/form/useGitFileSha";
+import { usePlugins } from "tinacms";
 
 
 export default function Setup(

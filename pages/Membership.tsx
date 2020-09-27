@@ -11,7 +11,7 @@ import preview from './api/preview';
 import SetupContent from './helpers/content';
 
 export default function Home({ file }) {
-  const pageName = 'About';
+  const pageName = 'Membership';
   const bgImage = '/images/second.png';
 
   const {form, data} = Setup(file);
@@ -38,7 +38,7 @@ export const getStaticProps: GetStaticProps = async function({
 
     // Gets the Props
     return SetupContent(
-      'content/home.json',
+      'content/membership.json',
       preview,
       previewData,
     );
