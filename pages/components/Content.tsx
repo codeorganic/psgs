@@ -30,6 +30,15 @@ export default function Content({
                     </InlineWysiwyg>
                 </div>
             </div>
+
+
+            <style global jsx>{`
+                strong { 
+                    fontWeight: bold !important; 
+                }
+            `}</style>
+
+            
         </div>
     );
 }
