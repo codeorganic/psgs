@@ -1,5 +1,5 @@
 # default config
-baseurl = "https://examplesite.org"
+baseurl = "https://codeorganic.github.io/psgs2/"
 languageCode = "en-us"
 title = "Parsa Hugo | Personal Blog Template"
 theme = "parsa-hugo"
@@ -46,20 +46,20 @@ link = "plugins/search/search.js"
 
 # navigation
 [[menu.main]]
-name = "Homepage"
+name = "Events"
 url = ""
 weight = 1
 hasChildren = true
 
   [[menu.main]]
-  parent = "Homepage"
-  name = "Homepage 1"
-  url = "homepage/home-1"
+  parent = "Events"
+  name = "Show and Sale"
+  url = "events/event-1"
 
   [[menu.main]]
-  parent = "Homepage"
-  name = "Homepage 2"
-  url = "homepage/home-2"
+  parent = "Events"
+  name = "Meetings"
+  url = "events/event-2"
 
 [[menu.main]]
 name = "About"
@@ -71,12 +71,17 @@ name = "Contact"
 url = "contact"
 weight = 3
 
+[[menu.main]]
+name = "Membership"
+url = "membership"
+weight = 3
+
 # deult parameter
 [params]
 logo = "images/logo.png"
 home = "Home"
 # theme layout ( two layout is available, "1" and "2" )
-layout = "1"
+layout = "2"
 # Meta data
 description = "This is meta description"
 # Preloader
@@ -84,9 +89,9 @@ preloader = true
 # search
 search = true
 # about author
-author = "John Doe"
-author_image = "images/banner-img.png"
-bio = "I’m a Freelance Interactive Art Director based in France. Focusing across branding and identity, digital and print."
+author = "PSGS"
+author_image = "images/wei.png"
+bio = "We are a small group  of people, growing plants inside the puget sound region"
 # Contact info
 mobile = "+90 000 333 22"
 email = "exmaple@ymail.com"
@@ -103,8 +108,8 @@ access_token = "IGQVJYeUk4YWNIY1h4OWZANeS1wRHZARdjJ5QmdueXN2RFR6NF9iYUtfcGp1Nmpx
 
 # cookies
 [params.cookies]
-enable = true
-expire_days = 2
+enable = false
+expire_days = 999
 
 # social site
 [[params.social]]
