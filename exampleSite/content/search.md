@@ -1,5 +1,5 @@
 ---
 title: "Search Result"
-description: "This is meta description"
+description: "PSGS Search Page"
 layout: "search"
 ---

@@ -32,14 +32,16 @@
     <div class="row">
       <div class="col-lg-6 align-self-end">
         <h1 class="mb-0">Welcome</h1>
-        <h2 class="mb-100 title-border-lg">to <i>{{site.Params.author}}</i></h2>
+        <!-- <h2 class="mb-100 title-border-lg">to <i>{{site.Params.author}}</i></h2> -->
         <p class="mb-80 mr-5">{{site.Params.bio | markdownify }}</p>
-        <span class="font-secondary text-dark mr-3 mr-sm-5">Follow us :</span>
-        <ul class="list-inline d-inline-block mb-5">
-          {{ range site.Params.social }}
-            <li class="list-inline-item mx-3"><a href="{{.URL}}" class="text-dark"><i class="{{.icon}}"></i></a></li>
-          {{ end }}
-        </ul>
+        {{ if site.Params.socialToggle.enable }}
+          <span class="font-secondary text-dark mr-3 mr-sm-5">Follow us :</span>
+          <ul class="list-inline d-inline-block mb-5">
+            {{ range site.Params.social }}
+              <li class="list-inline-item mx-3"><a href="{{.URL}}" class="text-dark"><i class="{{.icon}}"></i></a></li>
+            {{ end }}
+          </ul>
+        {{ end  }}
       </div>
       <div class="col-lg-6 text-right">
         <img class="img-fluid" src="{{site.Params.author_image | absURL}}" alt="banner-image">
@@ -102,7 +104,5 @@
   </div>
 </section>
 <!-- /blog post -->
-
-{{partial "instafeed.html" . }}
 
 {{ end }}

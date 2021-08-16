@@ -23,14 +23,16 @@
           </ul>
           {{ end }}
         </div>
-        <div class="col-md-3 col-sm-6 mb-4 mb-md-0 offset-md-3">
-          <h6>Follow</h6>
-          <ul class="list-inline d-inline-block">
-            {{ range site.Params.social }}
-            <li class="list-inline-item"><a href="{{ .URL }}" class="text-dark"><i class="{{ .icon }}"></i></a></li>
-            {{ end }}
-          </ul>
-        </div>
+        {{ if site.Params.socialToggle.enable }}
+          <div class="col-md-3 col-sm-6 mb-4 mb-md-0 offset-md-3">
+            <h6>Follow</h6>
+            <ul class="list-inline d-inline-block">
+              {{ range site.Params.social }}
+              <li class="list-inline-item"><a href="{{ .URL }}" class="text-dark"><i class="{{ .icon }}"></i></a></li>
+              {{ end }}
+            </ul>
+          </div>
+        {{ end }}
       </div>
     </div>
   </div>
@@ -70,6 +72,16 @@
 			};
 		}
 	})(jQuery);
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-078ENXGXFP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-078ENXGXFP');
 </script>
 
 <!-- cookie style -->

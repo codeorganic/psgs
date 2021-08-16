@@ -1,12 +1,14 @@
 # default config
-baseurl = "https://codeorganic.github.io/psgs2/"
+baseurl = "https://www.soundgesneriads.com"
 languageCode = "en-us"
-title = "Parsa Hugo | Personal Blog Template"
+title = "PSGS | Puget Sound Gesneriad Society"
 theme = "parsa-hugo"
 summaryLength = "10"
 paginate = 6
 # google analytics
-googleAnalytics = "" # example : UA-123-45
+googleAnalytics = "G-078ENXGXFP" # example : UA-123-45
+# Robots
+enableRobotsTXT = true
 
 # output
 [outputs]
@@ -19,6 +21,8 @@ link = "plugins/bootstrap/bootstrap.min.css"
 link = "plugins/slick/slick.css"
 [[params.plugins.css]]
 link = "plugins/themify-icons/themify-icons.css"
+[[params.plugins.css]]
+link = "plugins/lightbox2/css/lightbox.min.css"
 
 # JS Plugins
 [[params.plugins.js]]
@@ -43,6 +47,8 @@ link = "plugins/search/fuse.min.js"
 link = "plugins/search/mark.js"
 [[params.plugins.js]]
 link = "plugins/search/search.js"
+[[params.plugins.js]]
+link = "plugins/lightbox2/js/lightbox.min.js"
 
 # navigation
 [[menu.main]]
@@ -53,13 +59,13 @@ hasChildren = true
 
   [[menu.main]]
   parent = "Events"
-  name = "Show and Sale"
-  url = "events/event-1"
+  name = "Convention"
+  url = "events/convention"
 
   [[menu.main]]
   parent = "Events"
   name = "Meetings"
-  url = "events/event-2"
+  url = "events/meetings"
 
 [[menu.main]]
 name = "About"
@@ -69,12 +75,17 @@ weight = 2
 [[menu.main]]
 name = "Contact"
 url = "contact"
-weight = 3
+weight = 4
 
 [[menu.main]]
 name = "Membership"
 url = "membership"
 weight = 3
+
+[[menu.main]]
+name = "Gallery"
+url = "gallery"
+weight = 5
 
 # deult parameter
 [params]
@@ -90,8 +101,8 @@ preloader = true
 search = true
 # about author
 author = "PSGS"
-author_image = "images/wei.png"
-bio = "We are a small group  of people, growing plants inside the puget sound region"
+author_image = "images/wei_clean_2.png"
+bio = "The Puget Sound Gesneriad Society (PSGS) is a small group of people in the Puget Sound region, who grow a family of plants called gesneriads."
 # Contact info
 mobile = "+90 000 333 22"
 email = "exmaple@ymail.com"
@@ -99,11 +110,11 @@ address = "6 rip carl Avenue CA 90733"
 # Contact Form Action
 contact_form_action = "#"
 # copyright
-copyright = "Copyright &copy; 2020 a theme by [themefisher.com](themefisher.com)"
+copyright = "Copyright &copy; 2020 Puget Sound Gesneriad Society"
 
 # Instagram feed
 [params.instafeed]
-enable = true
+enable = false
 access_token = "IGQVJYeUk4YWNIY1h4OWZANeS1wRHZARdjJ5QmdueXN2RFR6NF9iYUtfcGp1NmpxZA3RTbnU1MXpDNVBHTzZAMOFlxcGlkVHBKdjhqSnUybERhNWdQSE5hVmtXT013MEhOQVJJRGJBRURn"
 
 # cookies
@@ -112,6 +123,9 @@ enable = false
 expire_days = 999
 
 # social site
+[params.socialToggle]
+enable = false
+
 [[params.social]]
 icon = "ti-facebook"
 url = "#"
