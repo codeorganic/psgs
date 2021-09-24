@@ -19,15 +19,13 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        {{ .Content }}
-        <br /><br />
-        <div class="container">
-          <div class="row">
-            <div class="col">
-              <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfIs-OO_Qa3JwJKE1_j0OmrHVO0goC8uvUc95fLxTZmt_zLJA/viewform?embedded=true" width="100%" height="1300" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-            </div>
-          </div>
-        </div>
+        {{ $image := (.Page.Resources.Match "images/*") }}
+        {{ with $image }}
+            {{ range . }}
+            {{ $resized := .Fill "150x115 q20" }}
+            <a href="{{ .Permalink }}" data-lightbox="x"><img class="img-thumbnail" src="{{ $resized.Permalink }}" /></a>
+            {{ end }}
+        {{ end }}
       </div>
     </div>
   </div>

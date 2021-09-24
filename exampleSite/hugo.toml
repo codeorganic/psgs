@@ -1,5 +1,5 @@
 # default config
-baseurl = "https://www.soundgesneriads.com"
+baseurl = "https://www.pugetsoundgesneriadsociety.org"
 languageCode = "en-us"
 title = "PSGS | Puget Sound Gesneriad Society"
 theme = "parsa-hugo"
@@ -9,6 +9,7 @@ pagination.pagerSize = 6
 googleAnalytics = "G-078ENXGXFP" # example : UA-123-45
 # Robots
 enableRobotsTXT = true
+
 
 # output
 [outputs]
@@ -62,14 +63,16 @@ weight = 1
 hasChildren = true
 
   [[menu.main]]
-  parent = "Events"
-  name = "Convention"
-  url = "events/convention"
-
-  [[menu.main]]
+  weight = 2
   parent = "Events"
   name = "Meetings"
   url = "events/meetings"
+
+  [[menu.main]]
+  weight = 1
+  parent = "Events"
+  name = "Show & Sale"
+  url = "events/show"
 
 [[menu.main]]
 name = "About"

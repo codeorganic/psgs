@@ -5,11 +5,9 @@ description: "About Us"
 image: "images/about_1.jpg"
 ---
 The Puget Sound Gesneriad Society (PSGS) is a chapter of the international Gesneriad Society. Both are non-
-profit organizations that encourage the culture of plants in the gesneriad family. Our chapter meets ten
-times a year* to exchange plants and information, enjoy a program about plants, hold a business
-meeting, and participate in a plant raffle.
+profit organizations that encourage the culture of plants in the gesneriad family. Our chapter meets ten times a year (usually the second Sunday of the month) to exchange plants and information, enjoy a program about plants, hold a business meeting, and participate in a plant raffle.
 
-*Meetings are currently being held virtually. If you wish to attend a meeting or have further questions,
+If you wish to attend a meeting or have further questions,
 please [contact us](/contact/).
 
 {{< rawhtml >}}
