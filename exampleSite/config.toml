@@ -1,5 +1,5 @@
 # default config
-baseurl = "https://www.soundgesneriads.com"
+baseurl = "https://www.pugetsoundgesneriadsociety.org"
 languageCode = "en-us"
 title = "PSGS | Puget Sound Gesneriad Society"
 theme = "parsa-hugo"

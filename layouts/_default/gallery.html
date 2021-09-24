@@ -1,0 +1,34 @@
+{{ define "main" }}
+
+<section class="section bg-secondary">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h4>{{ .Title }}</h4>
+        {{ if .Summary }}
+          <p>
+            {{ .Summary }}
+          </p>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        {{ $image := (.Page.Resources.Match "images/*") }}
+        {{ with $image }}
+            {{ range . }}
+            {{ $resized := .Fill "150x115 q20" }}
+            <a href="{{ .Permalink }}" data-lightbox="x"><img class="img-thumbnail" src="{{ $resized.Permalink }}" /></a>
+            {{ end }}
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}
