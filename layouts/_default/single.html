@@ -1,7 +1,7 @@
 {{ define "main" }}
 
 <!-- checking blog -->
-{{ if or (eq .Section "post") (eq .Section "posts") (eq .Section "blog") (eq .Section "blogs") (eq .Section "news") (eq .Section "categories") (eq .Section "tags") }}
+{{ if or (eq .Section "post") (eq .Section "posts") (eq .Section "blog") (eq .Section "blogs") (eq .Section "news") (eq .Section "events") (eq .Section "event") (eq .Section "categories") (eq .Section "tags") }}
 
 <!-- page-title -->
 <section class="section bg-secondary">
@@ -9,6 +9,11 @@
     <div class="row">
       <div class="col-lg-12">
         <h4>{{ .Title }}</h4>
+        {{ if .Summary }}
+          <p>
+            {{ .Summary }}
+          </p>
+        {{ end }}
       </div>
     </div>
   </div>
@@ -19,17 +24,17 @@
 <section>
   <div class="container">
     <div class="row">
-      <div class="col-lg-8">
+      <div class="col-lg-12">
         <ul class="list-inline d-flex justify-content-between py-3">
-          <li class="list-inline-item"><i class="ti-user mr-2"></i>Post by {{site.Params.author}}</li>
-          <li class="list-inline-item"><i class="ti-calendar mr-2"></i>{{ .PublishDate.Format "Jan 02, 2006" }}</li>
+          <!-- <li class="list-inline-item"><i class="ti-user mr-2"></i>Post by {{site.Params.author}}</li> -->
+          <!-- <li class="list-inline-item"><i class="ti-calendar mr-2"></i>{{ .PublishDate.Format "Jan 02, 2006" }}</li> -->
         </ul>
         <article class="content">
           {{ partial "image.html" (dict "Src" .Params.Image "Alt" "post-thumb" "Class" "img-fluid rounded float-left mr-5 mb-4" ) }}
           {{.Content}}
         </article>
       </div>
-      {{partial "sidebar.html" . }}
+      <!-- {{partial "sidebar.html" . }} -->
     </div>
   </div>
 </section>

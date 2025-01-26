@@ -7,28 +7,25 @@
             {{ partial "image.html" (dict "Src" site.Params.logo "Alt" "Image" "Class" "img-fluid" ) }}
           </a>
         </div>
-        <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
+        <!-- <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
           {{ if .Site.Params.address }}
-          <h6>Address</h6>
+          <h6>Contact</h6>
           <ul class="list-unstyled">
             <li class="font-secondary text-dark">{{site.Params.address | markdownify }}</li>
           </ul>
           {{ end }}
-        </div>
+        </div> -->
         <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
           {{ if or  .Site.Params.mobile  .Site.Params.email }}         
-          <h6>Contact Info</h6>
+          <h6>External Links</h6>
           <ul class="list-unstyled">
-            {{ if .Site.Params.mobile }}
-            <li class="font-secondary text-dark">Tel : {{ .Site.Params.mobile | markdownify }}</li>
-            {{ end }}
-            {{ if .Site.Params.email }}           
-            <li class="font-secondary text-dark">Email : {{ .Site.Params.email | markdownify }}</li>
-            {{ end }}
+            <li class="font-secondary text-dark"><a href="https://www.gesneriadsociety.org/">Gesneriad Society</a></li>      
+            <li class="font-secondary text-dark"><a href="https://gesneriads.info/">Gesneriad Reference</a></li>      
+            <li class="font-secondary text-dark"><a href="https://africanvioletsocietyofamerica.org/">Violet Society</a></li>   
           </ul>
           {{ end }}
         </div>
-        <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
+        <div class="col-md-3 col-sm-6 mb-4 mb-md-0 offset-md-3">
           <h6>Follow</h6>
           <ul class="list-inline d-inline-block">
             {{ range site.Params.social }}
@@ -39,9 +36,9 @@
       </div>
     </div>
   </div>
-  <div class="text-center pb-3">
+  <!-- <div class="text-center pb-3">
     <p class="mb-0">{{ site.Params.copyright | markdownify }}</p>
-  </div>
+  </div> -->
 </footer>
 
 
@@ -75,6 +72,16 @@
 			};
 		}
 	})(jQuery);
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-078ENXGXFP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-078ENXGXFP');
 </script>
 
 <!-- cookie style -->

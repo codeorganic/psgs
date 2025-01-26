@@ -1,36 +1,25 @@
 ---
 title: "About"
 date: 2019-05-14T14:46:10+06:00
-description: "This is meta description"
-image: "images/author.jpg"
+description: "About Us"
+image: "images/about_1.jpg"
 ---
+The Puget Sound Gesneriad Society (PSGS) is a chapter of the international Gesneriad Society. Both are non-
+profit organizations that encourage the culture of plants in the gesneriad family. Our chapter meets ten
+times a year* to exchange plants and information, enjoy a program about plants, hold a business
+meeting, and participate in a plant raffle.
 
-### Hello, I’m **John Doe**
+*Meetings are currently being held virtually. If you wish to attend a meeting or have further questions,
+please [contact us](/contact/).
 
-Creative UI/UX desingerr how loves to craft beautiful that satisfy users needs the product. A best idea
-generate for the agency complay smart and elegant design When, while the lovely valley teems with vapour
-around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a
-few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling
-stream; and, as I lie close to the earth, a thousand unknown plants are noticed by me.
-
-I hear the buzz
-of the little world among the stalks, and grow familiar with the countless indescribable forms of the insects
-and flies, then I feel the presence of the Almighty, who formed us in his own image, and the breath of that
-universal love which bears and sustains.
-
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem deserunt tempora doloribus non, voluptas
-dolor? Consequuntur et ad officiis iste, vero natus possimus labore veritatis a eius doloremque. Optio amet
-quis harum nulla vitae repellat officiis veniam accusamus error hic deleniti in, quas est illum cum natus
-neque possimus delectus dolore ipsam. Pariatur, ad molestias alias voluptas iusto quam debitis beatae sint
-similique velit, dicta eos dolorum cumque mollitia officia iure labore voluptatibus. Non at sequi, natus
-dolores, cum accusamus repudiandae hic blanditiis ipsum possimus qui assumenda quaerat optio ab molestias ipsa
-iste molestiae dignissimos. Reprehenderit quod totam nostrum nihil.
-
-
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem deserunt tempora doloribus non, voluptas
-dolor? Consequuntur et ad officiis iste, vero natus possimus labore veritatis a eius doloremque. Optio amet
-quis harum nulla vitae repellat officiis veniam accusamus error hic deleniti in, quas est illum cum natus
-neque possimus delectus dolore ipsam. Pariatur, ad molestias alias voluptas iusto quam debitis beatae sint
-similique velit, dicta eos dolorum cumque mollitia officia iure labore voluptatibus. Non at sequi, natus
-dolores, cum accusamus repudiandae hic blanditiis ipsum possimus qui assumenda quaerat optio ab molestias ipsa
-iste molestiae dignissimos. Reprehenderit quod totam nostrum nihil.
+{{< rawhtml >}}
+<h4 class="mt-5 pt-5">Constitution and By-Laws</h4>
+<a class="btn btn-outline-primary btn-sm" role="button" target="_blank" href="https://docs.google.com/document/d/e/2PACX-1vT0IvkzTmOZXqgCYRWD8j_ZTr6Rnh1syLIRKW9z2uCfraincO9xakzy8QqTaUAnEw/pub">Download</a></a>
+<iframe 
+    width="100%",
+    height="1200",
+    frameborder: 0,
+    style="border:0;",
+    src="https://docs.google.com/document/d/e/2PACX-1vT0IvkzTmOZXqgCYRWD8j_ZTr6Rnh1syLIRKW9z2uCfraincO9xakzy8QqTaUAnEw/pub?embedded=true">
+    </iframe>
+{{< /rawhtml >}}
