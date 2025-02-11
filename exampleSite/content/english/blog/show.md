@@ -1,5 +1,5 @@
 ---
-title: "Show & Sale ( 2025 )"
+title: "Show & Sale"
 date: 2025-01-26T14:46:10+06:00
 description: "Puget Sound Gesneriad Society and the Seattle African Violet Society - Show & Sale"
 type: "post"
@@ -14,7 +14,7 @@ tags:
 summary: "April 26, 2025 from 10am to 3pm"
 ---
 
-The Puget Sound Gesneriad Society’s annual Show and Sale, held jointly with the Seattle African Violet Society, will take place at the Conservatory in Volunteer Park, Seattle, 1400 E. Galer Street, Saturday, April 26, 2025 from 10am to 3pm. 
+The Puget Sound Gesneriad Society’s annual Show and Sale, held jointly with the Seattle African Violet Society, will take place at the Conservatory in Volunteer Park, Seattle, 1400 E. Galer Street, **Saturday, April 26, 2025 from 10am to 3pm**. 
 
 The show can be viewed at the main greenhouse which will require a small entry fee. Sales will take place in the greenhouse behind the main building, to which admission is FREE.
 

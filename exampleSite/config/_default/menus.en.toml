@@ -1,27 +1,38 @@
-
 # navigation
 [[main]]
-name = "Homepage"
+name = "Events"
 url = ""
 weight = 1
 hasChildren = true
 
-[[main]]
-parent = "Homepage"
-name = "Homepage 1"
-url = "homepage/home-1/"
+  [[main]]
+  weight = 2
+  parent = "Events"
+  name = "Meetings"
+  url = "events/meetings"
 
-[[main]]
-parent = "Homepage"
-name = "Homepage 2"
-url = "homepage/home-2/"
+  [[main]]
+  weight = 1
+  parent = "Events"
+  name = "Show & Sale"
+  url = "blog/show"
 
 [[main]]
 name = "About"
-url = "about/"
+url = "about"
 weight = 2
 
 [[main]]
 name = "Contact"
-url = "contact/"
+url = "contact"
+weight = 4
+
+[[main]]
+name = "Membership"
+url = "membership"
 weight = 3
+
+[[main]]
+name = "Gallery"
+url = "gallery"
+weight = 5
